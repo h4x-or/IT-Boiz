@@ -1,0 +1,304 @@
+/* ================================
+   GOOGLE FONTS
+================================ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Manrope:wght@400;500&display=swap');
+
+/* ================================
+   CSS VARIABLES (THEME)
+================================ */
+:root {
+    --bg: #ffffff;
+    --text: #1f2933;
+    --primary: #2563eb;
+    --card: #f3f4f6;
+}
+
+body.dark {
+    --bg: #0f172a;
+    --text: #e5e7eb;
+    --primary: #38bdf8;
+    --card: #1e293b;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* ================================
+   GLOBAL RESET & TYPOGRAPHY
+================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(14px, 1.1vw, 16px);
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* Headings & Logo */
+h1, h2, h3, .logo {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+h2 {
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+}
+
+h3 {
+    font-size: clamp(1.2rem, 2vw, 1.4rem);
+}
+
+
+p {
+    font-size: clamp(0.9rem, 1.2vw, 1rem);
+    line-height: 1.6;
+}
+
+/* ================================
+   NAVBAR (ALL PAGES)
+================================ */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 8%;
+    position: sticky;
+    top: 0;
+    background: var(--bg);
+    z-index: 9999;
+}
+
+.logo {
+    color: var(--primary);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text);
+}
+
+/* Burger Menu */
+.burger {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* Theme Toggle */
+.toggle-item input {
+    display: none;
+}
+
+.toggle-item label {
+    width: 36px;
+    height: 18px;
+    background: var(--card);
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.toggle-item label::after {
+    content: "";
+    width: 16px;
+    height: 16px;
+    background: var(--primary);
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.toggle-item input:checked + label::after {
+    transform: translateX(18px);
+}
+
+/* ================================
+   INDEX.HTML (HOME LANDING PAGE)
+================================ */
+.landing {
+    min-height: calc(100svh - 72px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    animation: heroFade 1.2s ease forwards;
+}
+
+.hero-title {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero-title span {
+    color: var(--primary);
+}
+
+.hero-subtitle {
+    opacity: 0.9;
+    margin-bottom: 2rem;
+}
+
+/* Buttons */
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 0.85rem 1.6rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn.primary {
+    background: var(--primary);
+    color: #ffffff;
+}
+
+.btn.secondary {
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ================================
+   TEAM.HTML
+================================ */
+.team {
+    padding: 8rem 2rem;
+    text-align: center;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.card {
+    background: var(--card);
+    padding: 1.5rem;
+    border-radius: 10px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 10px #2563eb, 0 0 20px #38bdf8;
+}
+
+.logo-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* ================================
+   PROFILE PAGES
+================================ */
+.profile {
+    min-height: calc(100svh - 72px);
+    padding: 20% 3%;
+}
+
+.profile-content {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 3rem;
+    align-items: center;
+    animation: heroFade 1.2s ease forwards;
+}
+
+.profile-image {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-image img {
+    border-radius: 50%;
+    box-shadow: 0 0 10px #2563eb, 0 0 20px #38bdf8;
+    width: clamp(180px, 35vw, 300px);
+    height: clamp(180px, 35vw, 300px);
+    object-fit: cover;
+}
+
+/* ================================
+   ANIMATIONS
+================================ */
+@keyframes heroFade {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================================
+   MOBILE NAVIGATION
+================================ */
+@media (max-width: 768px) {
+    nav {
+        display: none;
+    }
+
+    nav.active {
+        display: block;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: var(--bg);
+        padding: 1rem;
+        border-radius: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    .burger {
+        display: block;
+    }
+}
