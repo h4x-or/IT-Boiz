@@ -6,7 +6,7 @@
 /* ================================
    CSS VARIABLES (THEME)
 ================================ */
-:root {
+body.light {
     --bg: #ffffff;
     --text: #1f2933;
     --primary: #2563eb;
@@ -302,3 +302,4 @@ nav a {
         display: block;
     }
 }
+
