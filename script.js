@@ -2,19 +2,6 @@ const burger = document.getElementById("burger");
 const nav = document.getElementById("nav-menu");
 const toggle = document.getElementById("theme-toggle");
 
-const img = document.getElementById("my-image");
-const roundBtn = document.getElementById("round-btn");
-const squareBtn = document.getElementById("square-btn");
-
-roundBtn.addEventListener("click", () => {
-    img.style.borderRadius = "50%"; // makes it circular
-});
-
-squareBtn.addEventListener("click", () => {
-    img.style.borderRadius = "0%"; // resets to square
-});
-
-
 /* Burger Menu */
 burger.addEventListener("click", () => {
     nav.classList.toggle("active");
