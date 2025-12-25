@@ -12,8 +12,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const savedTheme = localStorage.getItem("theme");
 
     if (savedTheme === "dark") {
-        document.body.classList.toggle("dark", savedTheme === "dark");
-        document.body.classList.toggle("light", savedTheme !== "dark");
+        document.body.classList.add("dark");
+    } 
+    else {
+        document.body.classList.add("light");
     }
 });
 
@@ -27,6 +29,7 @@ themeToggle.addEventListener("click", () => {
         localStorage.setItem("theme", "light");
     }
 });
+
 
 
 
