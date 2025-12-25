@@ -24,6 +24,7 @@ toggle.addEventListener("change", () => {
         localStorage.setItem("theme", "dark");
     } else {
         document.body.classList.remove("dark");
-        localStorage.setItem("theme", "light");
+        localStorage.setItem("theme", ":root");
     }
 });
+
