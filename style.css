@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Manrope:wght@400;500&display=swap');
 
-body.dark {
-    --bg: #ffffff;
-    --text: #1f2933;
-    --primary: #2563eb;
-    --card: #f3f4f6;
-}
-
 body {
     --bg: #0f172a;
     --text: #e5e7eb;
     --primary: #38bdf8;
     --card: #1e293b;
+}
+
+body.dark {
+    --bg: #ffffff;
+    --text: #1f2933;
+    --primary: #2563eb;
+    --card: #f3f4f6;
 }
 
 html {
@@ -310,3 +310,4 @@ nav a {
         display: block;
     }
 }
+
