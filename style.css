@@ -1,48 +1,77 @@
+
+/* ==========================================
+   IT BOIZ PORTFOLIO WEBSITE STYLES
+   Responsive design with dark/light theme support
+   ========================================== */
+
+/* Import Google Fonts for typography */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Manrope:wght@400;500&display=swap');
 
-body {
-    --bg: #0f172a;
-    --text: #e5e7eb;
-    --primary: #38bdf8;
-    --card: #1e293b;
+/* ==========================================
+   CSS CUSTOM PROPERTIES (VARIABLES)
+   Define color scheme for easy theme switching
+   ========================================== */
+:root {
+    /* Light theme colors (default) */
+    --bg: #0f172a;        /* Dark blue background */
+    --text: #e5e7eb;      /* Light gray text */
+    --primary: #38bdf8;   /* Bright blue accent */
+    --card: #1e293b;      /* Medium blue cards */
 }
 
+/* Dark theme color overrides */
 body.dark {
-    --bg: #ffffff;
-    --text: #1f2933;
-    --primary: #2563eb;
-    --card: #f3f4f6;
+    --bg: #ffffff;        /* White background */
+    --text: #1f2933;      /* Dark gray text */
+    --primary: #2563eb;   /* Darker blue accent */
+    --card: #f3f4f6;      /* Light gray cards */
 }
 
+/* Smooth scrolling for anchor links */
 html {
     scroll-behavior: smooth;
 }
 
-/* -------------------------------------------------------------------------------------- */
-/* -------------------------------------------------------------------------------------- */
+/* ==========================================
+   CSS RESET & GLOBAL STYLES
+   Reset browser defaults and set base styles
+   ========================================== */
 
+/* Universal reset for consistent box model */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Utility class for hiding elements */
+.hidden {
+    display: none;
+}
+
+/* Body styles with responsive font sizing */
 body {
-    font-family: 'Manrope', sans-serif;
-    font-size: clamp(14px, 1.1vw, 16px);
+    font-family: 'Manrope', sans-serif;  /* Clean, readable font */
+    font-size: clamp(14px, 1.1vw, 16px); /* Responsive font size */
     background: var(--bg);
     color: var(--text);
 }
 
+/* ==========================================
+   TYPOGRAPHY STYLES
+   Define font families and sizes for headings
+   ========================================== */
+
+/* Headings use Poppins for better visual hierarchy */
 h1, h2, h3, .logo {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
 }
 
+/* Main heading with responsive sizing */
 h1 {
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: clamp(2rem, 4vw, 3rem); /* Scales from 2rem to 3rem */
 }
-
 h2 {
     font-size: clamp(1.6rem, 3vw, 2.2rem);
 }
@@ -56,45 +85,56 @@ p {
     line-height: 1.6;
 }
 
-/* -------------------------------------------------------------------------------------- */
-/* -------------------------------------------------------------------------------------- */
+/* ==========================================
+   NAVIGATION STYLES
+   Sticky header with responsive mobile menu
+   ========================================== */
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1% 8%;
-    position: sticky;
+    position: sticky;    /* Sticks to top of viewport */
     top: 0;
     background: var(--bg);
-    z-index: 9999;
+    z-index: 9999;      /* High z-index to stay above content */
 }
 
 .logo {
-    color: var(--primary);
+    color: var(--primary);  /* Brand color for logo text */
 }
 
+/* Navigation menu list styling */
 nav ul {
-    list-style: none;
+    list-style: none;       /* Remove bullet points */
     display: flex;
-    gap: 1.2rem;
+    gap: 1.2rem;           /* Space between menu items */
 }
 
+/* Navigation link styling */
 nav a {
     text-decoration: none;
     color: var(--text);
 }
 
+/* Mobile hamburger menu button (hidden on desktop) */
 .burger {
     display: none;
     font-size: 1.8rem;
     cursor: pointer;
 }
 
+/* ==========================================
+   THEME TOGGLE SWITCH
+   Custom checkbox styling for dark/light mode
+   ========================================== */
+
 .toggle-item input {
-    display: none;
+    display: none;  /* Hide the actual checkbox */
 }
 
+/* Toggle switch background */
 .toggle-item label {
     width: 36px;
     height: 18px;
@@ -104,6 +144,7 @@ nav a {
     cursor: pointer;
 }
 
+/* Toggle switch handle (circle) */
 .toggle-item label::after {
     content: "";
     width: 16px;
@@ -113,48 +154,56 @@ nav a {
     top: 1px;
     left: 1px;
     border-radius: 50%;
-    transition: transform 0.3s;
+    transition: transform 0.3s;  /* Smooth animation */
 }
 
+/* Move toggle handle when checked (dark mode) */
 .toggle-item input:checked + label::after {
     transform: translateX(18px);
 }
 
-/* -------------------------------------------------------------------------------------- */
-/* -------------------------------------------------------------------------------------- */
+/* ==========================================
+   HERO/LANDING SECTION
+   Full-screen landing area with centered content
+   ========================================== */
 
 .landing {
-    min-height: calc(100svh - 72px);
+    min-height: calc(100svh - 72px);  /* Full viewport minus navbar height */
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
 
+/* Hero content container with max width */
 .hero-content {
     max-width: 800px;
-    animation: heroFade 1.2s ease forwards;
+    animation: heroFade 1.2s ease forwards;  /* Fade-in animation */
 }
 
+/* Main hero title styling */
 .hero-title {
-    font-weight: 700;
+    font-weight: 700;     /* Extra bold */
     margin-bottom: 1rem;
 }
 
+/* Highlighted text in hero title */
 .hero-title span {
-    color: var(--primary);
+    color: var(--primary);  /* Accent color */
 }
 
+/* Hero subtitle with reduced opacity */
 .hero-subtitle {
     opacity: 0.9;
     margin-bottom: 2rem;
 }
 
+/* Hero action buttons container */
 .hero-actions {
     display: flex;
     gap: 1rem;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap;  /* Wrap on small screens */
 }
 
 .btn {
@@ -180,14 +229,48 @@ nav a {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* -------------------------------------------------------------------------------------- */
-/* -------------------------------------------------------------------------------------- */
+/* ==========================================
+   BUTTON STYLES
+   Reusable button components with hover effects
+   ========================================== */
+
+.btn {
+    padding: 0.85rem 1.6rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Primary button (filled) */
+.btn.primary {
+    background: var(--primary);
+    color: #ffffff;
+}
+
+/* Secondary button (outlined) */
+.btn.secondary {
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+/* Button hover effect */
+.btn:hover {
+    transform: translateY(-3px);  /* Lift effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ==========================================
+   TEAM SECTION
+   Grid layout for team member cards
+   ========================================== */
 
 .team {
     padding: 8rem 2rem;
     text-align: center;
 }
 
+/* Responsive grid for team cards */
 .team-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -195,10 +278,16 @@ nav a {
     margin-top: 2rem;
 }
 
+/* Remove link styling from team cards */
 .card-link {
     text-decoration: none;
     color: inherit;
 }
+
+/* ==========================================
+   TEAM CARD STYLES
+   Individual team member card design
+   ========================================== */
 
 .card {
     background: var(--card);
@@ -208,21 +297,26 @@ nav a {
     cursor: pointer;
 }
 
+/* Card hover effects with glow */
 .card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 0 10px #2563eb, 0 0 20px #38bdf8;
+    transform: translateY(-6px);  /* Lift effect */
+    box-shadow: 0 0 10px #2563eb, 0 0 20px #38bdf8;  /* Blue glow */
 }
 
+/* Team member logo/profile image */
 .logo-image img {
     width: 100%;
     height: auto;
     object-fit: cover;
 }
 
-/* -------------------------------------------------------------------------------------- */
-/* -------------------------------------------------------------------------------------- */
+/* ==========================================
+   PROFILE SECTIONS (HIDDEN)
+   Individual team member profile pages - now shown in modals
+   ========================================== */
 
 .profile {
+    display: none;  /* Hidden - profiles now show in modal popups */
     min-height: calc(100svh - 72px);
     padding: 20% 3%;
 }
@@ -250,30 +344,39 @@ nav a {
     object-fit: cover;
 }
 
-/* -------------------------------------------------------------------------------------- */
-/* -------------------------------------------------------------------------------------- */
+/* ==========================================
+   CONTENT SECTIONS
+   About, Contact, Gallery, and Project Detail pages
+   ========================================== */
 
-.about, .contact, .gallery {
+.about, .contact, .gallery, .project-detail {
     min-height: calc(100svh - 72px);
     padding: 12rem 6%;
     margin: auto;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
 
-/* -------------------------------------------------------------------------------------- */
-/* -------------------------------------------------------------------------------------- */
+/* ==========================================
+   ANIMATIONS
+   CSS keyframe animations for smooth transitions
+   ========================================== */
 
 @keyframes heroFade {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(20px);  /* Start below and transparent */
     }
     to {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(0);     /* End at normal position */
     }
 }
 
+/* Theme toggle icon styling */
 .theme-icon {
     cursor: pointer;
     font-size: 1.4rem;
@@ -282,16 +385,21 @@ nav a {
 }
 
 .theme-icon:hover {
-    transform: scale(1.15);
+    transform: scale(1.15);  /* Slight zoom on hover */
 }
 
-/* -------------------------------------------------------------------------------------- */
-/* -------------------------------------------------------------------------------------- */
+/* ==========================================
+   MOBILE RESPONSIVE STYLES
+   Tablet and mobile device optimizations
+   ========================================== */
+
 @media (max-width: 768px) {
+    /* Hide desktop nav, show burger menu */
     nav {
         display: none;
     }
 
+    /* Mobile nav dropdown */
     nav.active {
         display: block;
         position: absolute;
@@ -309,5 +417,240 @@ nav a {
     .burger {
         display: block;
     }
+
+    .modal-content .profile-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1rem 0;
+    }
+
+    .modal-content .profile-image img {
+        width: clamp(120px, 30vw, 200px);
+        height: clamp(120px, 30vw, 200px);
+    }
+
+    .modal-content .profile-text h1 {
+        font-size: 1.8rem;
+    }
 }
 
+
+/* -------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------- */
+
+.contact-div {
+    max-width: 800px;
+    margin: auto;
+    text-align: left;
+}
+.contact-div button {
+    width: 100%;
+}
+.name{
+    height: 50px;
+}
+/* Form input field heights */
+.email {
+    height: 50px;
+}
+
+.message {
+    height: 150px;
+}
+
+/* Form input and textarea styling */
+input, textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--text);
+    border-radius: 5px;
+    background: var(--card);
+    color: var(--text);
+    font-size: 1rem;
+    font-family: 'Manrope', sans-serif;
+}
+
+/* Form label styling */
+label {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+/* ==========================================
+   GALLERY STYLES
+   Grid layout for project showcase
+   ========================================== */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);  /* 4 columns on desktop */
+    gap: 2rem;
+    margin-top: 2rem;
+    border-radius: 10px;
+    justify-content: space-between;
+}
+
+.gallery-item img {
+    width: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: pointer;
+    background-color: pink;  /* Temporary background */
+    height: 200px;
+    border: solid 2px #000000;
+    box-shadow: 0 0 10px #2563eb, 0 0 20px #38bdf8;
+    width: clamp(180px, 35vw, 300px);  /* Responsive width */
+}
+/* Gallery item container (note: typo in class name) */
+.galery-item {
+    display: flex;
+    justify-content: center;
+    height: 200px;
+    width: clamp(180px, 35vw, 300px);
+}
+
+/* Gallery button container */
+.button-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Gallery "Add Item" button styling */
+.ewan-button {
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    background-color: rgba(0, 0, 0, 0);  /* Transparent background */
+    color: #2563eb;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    border: solid 2px #2563eb;
+    box-shadow: 0 0 10px #2563eb, 0 0 20px #38bdf8;
+}
+
+.ewan-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ==========================================
+   FOOTER STYLES
+   Site footer with social links
+   ========================================== */
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: var(--card);
+    color: var(--text);
+    font-size: 0.9rem;
+}
+
+/* Footer link styling */
+footer a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Social media icons container */
+.icons-div {
+    margin-top: 0.5rem;
+    justify-content: center;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+/* ==========================================
+   MODAL STYLES
+   Popup overlays for projects and profiles
+   ========================================== */
+
+/* Modal overlay background */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10000; /* Higher than navbar's 9999 */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);  /* Semi-transparent black */
+}
+
+/* Show modal with flexbox centering */
+.modal.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal content container */
+.modal-content {
+    background-color: var(--bg);
+    padding: 100px 10px 100px 10px;
+    border: none;
+    width: 97%;
+    max-width: 1100px;
+    border-radius: 8px;
+    position: relative;
+    max-height: 95vh;
+    overflow-y: auto;
+    justify-content: center;
+}
+
+/* Modal close button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--text);
+    background: none;
+    border: none;
+    z-index: 1;
+    cursor: pointer;
+}
+
+/* ==========================================
+   PROFILE MODAL CONTENT
+   Team member profile display within modals
+   ========================================== */
+
+.modal-content .profile-content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.modal-content .profile-image {
+    display: flex;
+    justify-content: center;
+}
+
+.modal-content .profile-image img {
+    border-radius: 50%;
+    box-shadow: 0 0 10px #2563eb, 0 0 20px #38bdf8;
+    width: clamp(150px, 25vw, 250px);
+    height: clamp(150px, 25vw, 250px);
+    object-fit: cover;
+}
+
+.modal-content .profile-text h1 {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    margin-bottom: 1rem;
+}
