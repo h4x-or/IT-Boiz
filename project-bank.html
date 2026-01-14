@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank System Project - IT Boiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <h1 class="logo">IT Boiz</h1>
+    <nav id="nav-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#team">Our Team</a></li>
+            <li><a href="index.html#gallery">Gallery</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li class="toggle-item">
+                <input type="checkbox" id="theme-toggle">
+                <label for="theme-toggle"></label>
+            </li>
+        </ul>
+    </nav>
+    <div class="burger" id="burger">☰</div>
+</header>
+
+<section class="project-detail">
+    <h2>Bank System Project</h2>
+    <img src="images/computer-program-coding-screen_53876-138060.avif" alt="Bank System Project" style="width: 200px; height: 200px;">
+    <p>This project involves developing a comprehensive bank management system with features for account management, transactions, security, and user interfaces. It demonstrates full-stack development skills.</p>
+    <p>Technologies used: Python, Flask, SQLite, HTML/CSS, JavaScript.</p>
+    
+    <h3>Screenshots</h3>
+    <img src="images/Screenshot 2025-12-26 200813.png" alt="Bank System Login Screenshot" style="width: 300px; margin: 1rem;">
+    <img src="images/Screenshot 2025-12-26 200832.png" alt="Bank System Dashboard Screenshot" style="width: 300px; margin: 1rem;">
+    
+    <h3>Source Code Example</h3>
+    <pre><code>
+# Simple Bank Account Class in Python
+class BankAccount:
+    def __init__(self, account_number, balance=0):
+        self.account_number = account_number
+        self.balance = balance
+    
+    def deposit(self, amount):
+        self.balance += amount
+        return self.balance
+    
+    def withdraw(self, amount):
+        if amount > self.balance:
+            return "Insufficient funds"
+        self.balance -= amount
+        return self.balance
+    
+    def get_balance(self):
+        return self.balance
+
+# Example usage
+account = BankAccount("123456", 1000)
+account.deposit(500)
+print(account.get_balance())  # Output: 1500
+    </code></pre>
+    
+    <a href="index.html" class="btn primary" style="margin-top: 2rem;">Back to Gallery</a>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html></content>
+<parameter name="filePath">c:\Users\Admin\OneDrive\Desktop\D-P\project-bank.html
