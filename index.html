@@ -1,15 +1,26 @@
 <!DOCTYPE html>
+<!-- IT BOIZ PORTFOLIO WEBSITE -->
+<!-- A responsive portfolio showcasing our IT development team and projects -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- Responsive viewport for mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Team</title>
+    <!-- Link to main stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- ==========================================
+     SITE HEADER & NAVIGATION
+     Sticky navigation with mobile burger menu
+     ========================================== -->
 <header class="navbar">
+    <!-- Site logo/brand -->
     <h1 class="logo">IT Boiz</h1>
+
+    <!-- Desktop navigation menu -->
     <nav id="nav-menu">
         <ul>
             <li><a href="#main">Home</a></li>
@@ -17,15 +28,22 @@
             <li><a href="#team">Our Team</a></li>
             <li><a href="#gallery">Gallery</a></li>
             <li><a href="#contact">Contact</a></li>
+            <!-- Dark/light theme toggle switch -->
             <li class="toggle-item">
                 <input type="checkbox" id="theme-toggle">
                 <label for="theme-toggle"></label>
             </li>
         </ul>
     </nav>
+
+    <!-- Mobile hamburger menu button -->
     <div class="burger" id="burger">☰</div>
 </header>
 
+<!-- ==========================================
+     HERO SECTION
+     Main landing area with call-to-action
+     ========================================== -->
 <section id="main" class="hero landing">
     <div class="hero-content">
         <h1 class="hero-title">
@@ -36,22 +54,27 @@
             backend systems, software testing, and professional documentation.
         </p>
         <div class="hero-actions">
+            <!-- Links to team section and contact page -->
             <a href="#team" class="btn primary">Meet the Team</a>
             <a href="contact.html" class="btn secondary">Contact Us</a>
         </div>
     </div>
 </section>
 
+<!-- ==========================================
+     ABOUT SECTION
+     Information about the team and project
+     ========================================== -->
 <section id="about" class="about">
     <h2>About This Project</h2>
     <p>
         We are a team of four driven IT students united by a shared passion for building reliable, user-focused software. 
         Each of us brings a distinct specialization, allowing us to approach projects from every critical angle of the development lifecycle.
         <br><br>
-        Our <b>Frontend Developer</b> focuses on crafting clean, responsive, and accessible interfaces that deliver intuitive user experiences. 
-        The <b>Backend Systems Developer</b> designs secure, scalable, and efficient server-side solutions that power applications behind the scenes. 
-        Our <b>Software Tester</b> ensures quality at every stage by identifying bugs, validating functionality, and maintaining performance and reliability. 
-        Completing the team, our <b>Professional Documentation Specialist</b> transforms complex technical work into clear, structured, and user-friendly documentation that supports both developers and end users.
+        Our <b style="color: var(--primary);">Frontend Developer</b> focuses on crafting clean, responsive, and accessible interfaces that deliver intuitive user experiences. 
+        The <b style="color: var(--primary);">Backend Systems Developer</b> designs secure, scalable, and efficient server-side solutions that power applications behind the scenes. 
+        Our <b style="color: var(--primary);">Software Tester</b> ensures quality at every stage by identifying bugs, validating functionality, and maintaining performance and reliability. 
+        Completing the team, our <b style="color: var(--primary);">Professional Documentation Specialist</b> transforms complex technical work into clear, structured, and user-friendly documentation that supports both developers and end users.
         <br><br>
         Together, we combine creativity, technical precision, and collaboration to deliver complete, well-tested, and well-documented solutions. 
         This portfolio showcases our skills, teamwork, and commitment to professional software development standards.
@@ -59,120 +82,134 @@
     </p>
 </section>
 
+<!-- ==========================================
+     TEAM SECTION
+     Grid of team member cards that open profile modals
+     ========================================== -->
 <section id="team" class="team">
     <h2 class="fade-in">4 Horsemen of I.T Department</h2>
     <div class="team-grid">
 
-    <a href="#jondie" class="card-link">
-        <div class="card slide-up">
-            <div class="logo-image">
-                <img src="images/jondie_no_bg.png" alt="Profile Photo" />
+        <!-- Team member cards - clicking opens profile modal -->
+        <a href="#jondie" class="card-link">
+            <div class="card slide-up">
+                <div class="logo-image">
+                    <img src="images/jondie_no_bg.png" alt="Profile Photo" />
+                </div>
+                <h3>Frontend Developer</h3>
+                <p>Designs responsive and user-friendly interfaces.</p>
             </div>
-            <h3>Frontend Developer</h3>
-            <p>Designs responsive and user-friendly interfaces.</p>
-        </div>
-    </a>
+        </a>
 
-    <a href="#billy" class="card-link">
-        <div class="card slide-up">
-            <div class="logo-image">
-                <img src="images/billy_no_bg.png" alt="Profile Photo" />
+        <a href="#billy" class="card-link">
+            <div class="card slide-up">
+                <div class="logo-image">
+                    <img src="images/billy_no_bg.png" alt="Profile Photo" />
+                </div>
+                <h3>Backend Developer</h3>
+                <p>Manages databases, APIs, and system logic.</p>
             </div>
-            <h3>Backend Developer</h3>
-            <p>Manages databases, APIs, and system logic.</p>
-        </div>
-    </a>
+        </a>
 
-    <a href="#yanmar" class="card-link">
-        <div class="card slide-up">
-            <div class="logo-image">
-                <img src="images/yanmar_no_bg.png" alt="Profile Photo" />
+        <a href="#yanmar" class="card-link">
+            <div class="card slide-up">
+                <div class="logo-image">
+                    <img src="images/yanmar_no_bg.png" alt="Profile Photo" />
+                </div>
+                <h3>Tester / Debugger</h3>
+                <p>Ensures system reliability and bug-free performance.</p>
             </div>
-            <h3>Tester / Debugger</h3>
-            <p>Ensures system reliability and bug-free performance.</p>
-        </div>
-    </a>
+        </a>
 
-    <a href="#nero" class="card-link">
-        <div class="card slide-up">
-            <div class="logo-image">
-                <img src="images/nero_no_bg.png" alt="Profile Photo" />
+        <a href="#nero" class="card-link">
+            <div class="card slide-up">
+                <div class="logo-image">
+                    <img src="images/nero_no_bg.png" alt="Profile Photo" />
+                </div>
+                <h3>Documenter</h3>
+                <p>Creates technical and user documentation.</p>
             </div>
-            <h3>Documenter</h3>
-            <p>Creates technical and user documentation.</p>
-        </div>
-    </a>
-</div>
-</section>
-
-<section id="jondie" class="profile">
-    <div class="profile-content">
-        <div class="profile-image">
-            <img src="images/jondie.png" alt="Jondie Caguioa">
-        </div>
-        <div class="profile-text">
-            <h1>Hello, I`m <br>Jondie Caguioa</h1>
-            <p>Elite frontend IT developer forged in Apex-level secure environments, 
-                crafting pixel-perfect, mission-critical interfaces with extreme precision, 
-                performance, and resilience, engineered to operate flawlessly under pressure, 
-                complexity, and zero-failure conditions.</p>
-        </div>
+        </a>
     </div>
 </section>
 
-<section id="billy" class="profile">
-    <div class="profile-content">
-        <div class="profile-image">
-            <img src="images/billy.png">
-        </div>
-        <div class="profile-text">
-            <h1>Hello, I`m <br>Billy Jay A. Lorenzo</h1>
-            <p>Elite backend IT developer forged in Apex-level secure environments, 
-              architecting mission-critical, zero-failure systems, hardened APIs, and 
-              ultra-scalable infrastructure built to survive extreme loads, precision demands, 
-              and unforgiving real-world conditions.</p>
-        </div>
-        
-    </div>
-</section>
-
-<section id="yanmar" class="profile">
-    <div class="profile-content">
-        <div class="profile-image">
-            <img src="images/yanmar.png" alt="Yanmar J. Lachica Jr.">
-        </div>
-        <div class="profile-text">
-            <h1>Hello, I`m <br>Yanmar J. Lachica Jr.</h1>
-            <p>Elite software tester and debugger, trained to detect even the most elusive bugs, 
-                ensuring mission-critical systems remain stable under extreme conditions. 
-                Expert in stress-testing, automation, and precision validation to guarantee 
-                flawless performance in real-world environments.</p>
-        </div>
-    </div>
-</section>
-
-<section id="nero" class="profile">
-    <div class="profile-content">
-        <div class="profile-image">
-            <img src="images/nero.png" alt="Nero Marron Elazegui">
-        </div>
-        <div class="profile-text">
-            <h1>Hello, I`m <br>Nero Marron Elazegui</h1>
-            <p>Elite technical documenter, skilled in creating clear, precise, and comprehensive 
-                documentation for complex IT systems. Adept at translating intricate processes into 
-                user-friendly guides, ensuring teams and clients can operate software efficiently 
-                and accurately under demanding conditions.</p>
-        </div>
-    </div>
-</section>
-
+<!-- ==========================================
+     GALLERY SECTION
+     Showcase of recent projects with modal popup
+     ========================================== -->
 <section id="gallery" class="gallery">
     <h2>Recent work</h2>
+    <div class="gallery-grid">
+        <!-- Project thumbnail - clicking opens project modal -->
+        <div class="gallery-item">
+            <img src="images/computer-program-coding-screen_53876-138060.avif" style="width: 250px; height: 200px;" alt="Bank System Project" onclick="openModal()">
+        </div>
+    </div>
+
+    <!-- Show more button (hidden by default, shown when needed) -->
+    <button id="show-more" style="display: none; margin-top: 1rem; padding: 0.75rem 1.5rem; border-radius: 8px; background: var(--primary); color: white; border: none; cursor: pointer;">Show More</button>
 </section>
 
+<!-- ==========================================
+     CONTACT SECTION
+     Contact form for client inquiries
+     ========================================== -->
 <section id="contact" class="contact">
-    <h2>Do not Contact Us</h2>
+    <h2>Get in Touch</h2>
+    <form action="">
+        <div class="contact-div">
+            <label for="">Name (required)</label>
+            <input class="name" type="text" placeholder="Your Name" />
+            <label for="">Email (required)</label>
+            <input class="email" type="email" placeholder="Your Email" />
+            <label for="">Number (required)</label>
+            <input class="number" type="tel" placeholder="Your Number" />
+            <label for="">Company/Business Name (required)</label>
+            <input class="cmpny" type="text" placeholder="Company/Business Name" />
+            <label for="">Message</label>
+            <textarea class="mssg" placeholder="Your Message"></textarea>
+
+            <button type="submit" class="btn primary">Send Message</button>
+        </div>
+    </form>
 </section>
+
+<!-- ==========================================
+     SITE FOOTER
+     Copyright and social media links
+     ========================================== -->
+<footer>
+    <p>&copy; 2025 IT Boiz. All rights reserved.</p>
+    <div class="icons-div">
+        <!-- Social media links (placeholders) -->
+        <a href="#"><img src="images/icons8-facebook-50.png" alt="Facebook"></a>
+        <a href="#"><img src="images/icons8-x-50.png" alt="Twitter"></a>
+        <a href="#"><img src="images/icons8-instagram-50.png" alt="Instagram"></a>
+        <a href="#"><img src="images/icons8-linkedin-50.png" alt="LinkedIn"></a>
+    </div>
+</footer>
+
+<!-- ==========================================
+     MODAL OVERLAYS
+     Hidden popup containers for projects and profiles
+     ========================================== -->
+
+<!-- Project details modal (populated dynamically via JavaScript) -->
+<div id="projectModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <!-- Content loaded dynamically -->
+    </div>
+</div>
+
+<!-- Team member profile modal (populated dynamically via JavaScript) -->
+<div id="profileModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeProfileModal()">&times;</span>
+    </div>
+</div>
+
+<!-- Load main JavaScript functionality -->
 <script src="script.js"></script>
 </body>
 </html>
